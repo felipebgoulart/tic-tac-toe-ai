@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="alpha-beta.js"></script>
+    <script src="ui-control.js"></script>
+    <script src="cron.js"></script>
+    <title>Tic Tac Toe - The AI</title>
+  </head>
+  <body>
+    
+    <div
+      class="d-flex row text-center flex-column h-100 justify-content-center align-items-center"
+    >
+
+      <div id="choose-side" class="mb-5 text-center" style="color: #fafafa">
+        <span>Choose your side</span>
+        <div>
+          <span id="X" onclick="chooseSide(id)">X</span>
+          <span id="O" onclick="chooseSide(id)">O</span>
+        </div>
+      </div>
+
+      <div id="turn" class="turn mb-5">
+        <span>Its <span id="player"></span> Turn</span>
+      </div>
+
+      <div id="winner" class="mb-5"></div>
+
+      <div id="board" class="col-10 col-md-6 board">
+        <div class="row m-0 board-line">
+          <div
+            id="a3"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(0, 0, id)"
+          ></div>
+
+          <div
+            id="b3"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(0, 1, id)"
+          ></div>
+
+          <div
+            id="c3"
+            class="col-4 p-0 d-flex justify-content-center align-items-center"
+            onclick="onFieldClick(0, 2, id)"
+          ></div>
+        </div>
+
+        <div class="row m-0 board-line board-line-vertical-border">
+          <div
+            id="a2"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(1, 0, id)"
+          ></div>
+
+          <div
+            id="b2"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(1, 1, id)"
+          ></div>
+
+          <div
+            id="c2"
+            class="col-4 p-0 d-flex justify-content-center align-items-center"
+            onclick="onFieldClick(1, 2, id)"
+          ></div>
+        </div>
+
+        <div class="row m-0 board-line">
+          <div
+            id="a1"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(2, 0, id)"
+          ></div>
+
+          <div
+            id="b1"
+            class="col-4 p-0 d-flex justify-content-center align-items-center board-right-border"
+            onclick="onFieldClick(2, 1, id)"
+          ></div>
+
+          <div
+            id="c1"
+            class="col-4 p-0 d-flex justify-content-center align-items-center"
+            onclick="onFieldClick(2, 2, id)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="cronometer">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span></span>
+      </div>
+      <br/>
+
+      <button id="reset-game" type="button" class="btn btn-light mt-5 col-6" onclick="resetGame()">Reset Game</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #1D2225;
+}
+
+.board {
+  /* width: 40%; */
+  height: 40%;
+  color: yellow;
+  pointer-events: none;
+  display: none;
+}
+
+.board-line {
+  height: 33.33%;
+  font-size: 4rem;
+}
+
+.board-line-vertical-border {
+  border-bottom: 1px solid #fafafa;
+  border-top: 1px solid #fafafa;
+}
+
+.board-right-border {
+  border-right: 1px solid #fafafa;
+}
+
+.turn {
+  color: #fafafab0;
+  font-size: 4rem;
+  display: none;
+}
+
+#winner {
+  color: #fafafab0;
+  font-size: 4rem;
+  display: none;
+}
+
+#player {
+  color: #fafafa;
+}
+
+#choose-side {
+  font-size: 4rem;
+}
+
+#X {
+  cursor: pointer;
+  color: #FCE77D;
+}
+
+#O {
+  cursor: pointer;
+  color: #8DC3F1;
+}
+
+#reset-game {
+  display: none;
+}
+
+.cronometer {
+  font-size: 3rem;
+  color: #fafafa;
+}
